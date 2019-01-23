@@ -1,0 +1,23 @@
+{
+  "name": "app-blog-vuepress",
+  "version": "1.0.0",
+  "description": "app-blog-vuepress",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TpWILovePanda/Blog-VuePress.git"
+  },
+  "keywords": [
+    "vuepress"
+  ],
+  "author": "Terry.TY Chen <zxtw17985321@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  }
+}
