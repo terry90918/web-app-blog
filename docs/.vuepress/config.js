@@ -1,33 +1,56 @@
 module.exports = {
   base: '/app-blog-vuepress/',
-  title: 'TY',
-  description: 'Terry.TY Chen Blog',
+  title: 'F2E Go',
+  description: '前端工程師的旅程之路 - VuePress',
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/logo.png'
+      }
+    ]
+  ],
   themeConfig: {
+    sidebar: {
+      '/canvas/': [
+        '',
+        'one',
+        // 'two'
+      ],
+      '/': [
+        '',
+      ],
+    },
     nav: [
       {
-        text: '文章',
-        link: '/article/'
+        text: 'Canvas',
+        link: '/canvas/'
       },
       {
         text: 'Github',
         link: 'https://github.com/TpWILovePanda'
       },
-      {
-        text: 'VuePress',
-        items: [{
-            text: '繁體中文',
-            link: 'https://vuepress.vuejs.org/zh/'
-          },
-          {
-            text: 'English',
-            link: 'https://vuepress.vuejs.org/'
-          }
-        ]
-      },
     ],
-    sidebar: [
-      '/',
-      '/demo/'
-    ]
+    serviceWorker: {
+      updatePopup: true
+    }
   },
+  // locales: {
+  //   '/zh/TW': {
+  //     lang: '繁體中文',
+  //     title: 'VuePress',
+  //     description: 'Vue 驅動的靜態網站生成器'
+  //   },
+  //   '/zh/CN': {
+  //     lang: '簡體中文',
+  //     title: 'VuePress',
+  //     description: 'Vue 驱动的静态网站生成器'
+  //   },
+  //   '/en/US': {
+  //     lang: 'en-US',
+  //     title: 'VuePress',
+  //     description: 'Vue-powered Static Site Generator'
+  //   },
+  // }
 }
