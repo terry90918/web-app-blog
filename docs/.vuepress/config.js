@@ -15,8 +15,11 @@ module.exports = {
     sidebar: {
       '/canvas/': [
         '',
-        'one',
-        // 'two'
+        'example',
+      ],
+      '/chrome/': [
+        '',
+        'extensions',
       ],
       '/': [
         '',
@@ -25,16 +28,20 @@ module.exports = {
     nav: [
       {
         text: 'Canvas',
-        link: '/canvas/'
+        link: '/canvas/',
+      },
+      {
+        text: 'Chrome',
+        link: '/chrome/',
       },
       {
         text: 'Github',
-        link: 'https://github.com/TpWILovePanda'
+        link: 'https://github.com/TpWILovePanda',
       },
     ],
     serviceWorker: {
       updatePopup: true
-    }
+    },
   },
   // locales: {
   //   '/zh/TW': {
