@@ -226,7 +226,9 @@ ctx.fill();
 Demo: [傳送門](https://codepen.io/LovePanda/full/PVRpem)
 
 ```html
-<canvas id="#my-canvas"></canvas>
+<section>
+  <canvas id="my-canvas"></canvas>
+</section>
 ```
 
 ```sass
@@ -276,11 +278,11 @@ function draw() {
   }
   ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
   ctx.stroke();
- 
+
   // 繪製地面
   ctx.beginPath();
-  ctx.moveTo(25, 350);
-  ctx.lineTo(375, 350);
+    ctx.moveTo(25, 350);
+    ctx.lineTo(375, 350);
   ctx.lineWidth = 2;
   ctx.strokeStyle = 'black';
   ctx.stroke();
@@ -363,14 +365,14 @@ function draw() {
   ctx.fillStyle = 'black';
   ctx.fill();
   
-  
+  requestAnimationFrame(draw);
 }
 
 // draw();
-setInterval(draw, 30);
-// requestAnimationFrame(draw);
+// setInterval(draw, 30);
+requestAnimationFrame(draw);
 
-var mouse = { x: 0, y: 0 }
+var mouse = { x: 0, y: 0 };
 canvas.addEventListener('mousemove', function(e) {
   mouse.x = e.offsetX;
   mouse.y = e.offsetY;
