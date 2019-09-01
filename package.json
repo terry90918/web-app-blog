@@ -10,14 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TpWILovePanda/Blog-VuePress.git"
+    "url": "git+https://github.com/terry90918/web-app-blog.git"
   },
   "keywords": [
     "vuepress"
   ],
   "author": "Terry.TY Chen <zxtw17985321@gmail.com>",
   "license": "MIT",
-  "devDependencies": {},
   "dependencies": {
     "vuepress": "^1.0.3"
   }

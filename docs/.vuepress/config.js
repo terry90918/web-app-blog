@@ -17,11 +17,11 @@ module.exports = {
       {
         text: '大前端',
         items: [
-          { text: 'Canvas', link: '/FrontEnd/Canvas/', },
-          { text: 'Framework', link: '/FrontEnd/Framework/', },
-          { text: 'JavaScript', link: '/FrontEnd/JavaScript/', },
-          { text: 'Node.js', link: '/FrontEnd/Node.js/', },
-          { text: 'TypeScript', link: '/FrontEnd/TypeScript/', },
+          { text: 'Canvas', link: '/frontend/canvas/', },
+          { text: 'Framework', link: '/frontend/framework/', },
+          { text: 'JavaScript', link: '/frontend/javascript/', },
+          { text: 'Node.js', link: '/frontend/nodejs/', },
+          { text: 'TypeScript', link: '/frontend/typescript/', },
         ]
       },
       { text: 'UI 設計', link: '/ui/' },
