@@ -33,7 +33,7 @@ module.exports = {
       }, */
       {
         text: 'Github',
-        link: 'https://github.com/TpWILovePanda',
+        link: 'https://github.com/terry90918',
       },
     ],
     serviceWorker: {
