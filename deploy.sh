@@ -1,4 +1,5 @@
 set -e
+yarn install
 yarn docs:build
 cd docs/.vuepress/dist
 git init

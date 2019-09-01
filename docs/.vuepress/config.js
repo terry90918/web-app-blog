@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/app-blog-vuepress/',
+  base: '/',
   title: 'Terry Chen 的博客',
   description: '技術、生活的筆記',
   head: [
