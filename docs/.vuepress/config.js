@@ -1,7 +1,7 @@
 module.exports = {
   base: '/app-blog-vuepress/',
-  title: 'F2E Go',
-  description: '前端工程師的旅程之路 - VuePress',
+  title: 'Terry Chen 的博客',
+  description: '技術、生活的筆記',
   head: [
     [
       'link',
@@ -12,6 +12,33 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    nav: [
+      { text: 'Home', link: '/' },
+      {
+        text: '大前端',
+        items: [
+          { text: 'Canvas', link: '/FrontEnd/Canvas/', },
+          { text: 'Framework', link: '/FrontEnd/Framework/', },
+          { text: 'JavaScript', link: '/FrontEnd/JavaScript/', },
+          { text: 'Node.js', link: '/FrontEnd/Node.js/', },
+          { text: 'TypeScript', link: '/FrontEnd/TypeScript/', },
+        ]
+      },
+      { text: 'UI 設計', link: '/ui/' },
+      /* {
+        text: 'Languages',
+        items: [
+          { text: 'Chinese', link: '/language/chinese/' },
+        ]
+      }, */
+      {
+        text: 'Github',
+        link: 'https://github.com/TpWILovePanda',
+      },
+    ],
+    serviceWorker: {
+      updatePopup: true
+    },
     sidebar: {
       '/canvas/': [
         '',
@@ -25,39 +52,5 @@ module.exports = {
         '',
       ],
     },
-    nav: [
-      {
-        text: 'Canvas',
-        link: '/canvas/',
-      },
-      {
-        text: 'Chrome',
-        link: '/chrome/',
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/TpWILovePanda',
-      },
-    ],
-    serviceWorker: {
-      updatePopup: true
-    },
   },
-  // locales: {
-  //   '/zh/TW': {
-  //     lang: '繁體中文',
-  //     title: 'VuePress',
-  //     description: 'Vue 驅動的靜態網站生成器'
-  //   },
-  //   '/zh/CN': {
-  //     lang: '簡體中文',
-  //     title: 'VuePress',
-  //     description: 'Vue 驱动的静态网站生成器'
-  //   },
-  //   '/en/US': {
-  //     lang: 'en-US',
-  //     title: 'VuePress',
-  //     description: 'Vue-powered Static Site Generator'
-  //   },
-  // }
 }
