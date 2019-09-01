@@ -1,7 +1,8 @@
 ---
 home: true
 heroImage: /hero.png
-actionText: 快速上手 →
+heroText: 歡迎來到 Terry Chen 的博客
+actionText: 進入博客 →
 actionLink: /zh/guide/
 features:
 - title: 簡潔至上
