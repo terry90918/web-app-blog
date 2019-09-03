@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
-  title: 'Terry Chen 的博客',
-  description: '技術、生活的筆記',
+  title: 'TienYi Chen 博客',
+  description: '生活、技術',
   head: [
     [
       'link',
@@ -12,6 +12,7 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    displayAllHeaders: true,
     nav: [
       { text: 'Home', link: '/' },
       {
@@ -19,6 +20,7 @@ module.exports = {
         items: [
           { text: 'Canvas', link: '/frontend/canvas/', },
           { text: 'Framework', link: '/frontend/framework/', },
+          { text: 'Hexo', link: '/frontend/hexo/', },
           { text: 'JavaScript', link: '/frontend/javascript/', },
           { text: 'Node.js', link: '/frontend/nodejs/', },
           { text: 'TypeScript', link: '/frontend/typescript/', },
@@ -38,19 +40,6 @@ module.exports = {
     ],
     serviceWorker: {
       updatePopup: true
-    },
-    sidebar: {
-      '/canvas/': [
-        '',
-        'example',
-      ],
-      '/chrome/': [
-        '',
-        'extensions',
-      ],
-      '/': [
-        '',
-      ],
     },
   },
 }

@@ -1,3 +1,0 @@
-# Google Chrome
-
-Google Chrome

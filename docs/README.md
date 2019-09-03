@@ -3,7 +3,7 @@ home: true
 heroImage: /hero.png
 heroText: 歡迎來到 Terry Chen 的博客
 actionText: 進入博客 →
-actionLink: /zh/guide/
+actionLink: /frontend/
 features:
 - title: 簡潔至上
   details: 以 Markdown 為中心的項目結構，以最少的配置幫助你專注於寫作。
@@ -14,7 +14,7 @@ features:
 footer: MIT Licensed | Copyright © 2019
 ---
 
-### 像數 1, 2, 3 一樣容易
+# 像數 1, 2, 3 一樣容易
 
 ``` bash
 # 安裝
@@ -31,5 +31,5 @@ vuepress build .
 ```
 
 ::: warning 注意
-請確保你的 Node.js 版本> = 8。
+請確保你的 Node.js 版本 >= 10。
 :::

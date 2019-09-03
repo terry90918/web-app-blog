@@ -1,7 +1,8 @@
 # Chrome Extensions 入門
 
 簡單介紹，如何使用 **Chrome 擴充功能** 設計開起新的分頁時，顯示自己喜愛的圖片。
-先來到 [Extensionizr](https://extensionizr.com/) 網站，可幫助創建自己的 Chrome Extensions 基礎！ 
+
+先來到 [Extensionizr](https://extensionizr.com/) 網站，可幫助創建自己的 Chrome Extensions 基礎！
 
 1. 選擇 **Browser action**，因為要設計開啟新分頁時顯示漂亮圖片，而開啟新分頁屬於 Browser 部分。
 1. 選擇 **Background.html**，漂亮圖片需要 html 撰寫 `<img src="..." alt="..." srcset="...">`
@@ -17,69 +18,72 @@
 
 完成下載後，打開資料夾會看到此架構
 
-```
 ├── _locales - 本地端語言設定位置
 ├── css - 使用到的 CSS 放置位置
 ├── icons - 圖示放置位置
 ├── js - 使用到的 JavaScript 放置位置
 ├── src - 背景、瀏覽器觸發、設定、覆寫之頁面的 HTML 放置位置
 └── manidest.json - 它就如同 Chrome 擴充功能的描述簡介
-```
 
 ## **manifest.json**
 
 ```json
 {
-  // 擴充功能名稱
-  "name": "CHANGE THIS : Extension boilerplate",
-  // 擴充功能版本
-  "version": "0.0.1",
-  "manifest_version": 2,
-  // 擴充功能簡介描述
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
-  // 擴充功能縮圖位置
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  // 預設本地端語言
-  "default_locale": "en",
-  // 背景執行程式位置
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": false
-  },
-  // 彈跳選單內容位置
-  "options_page": "src/options/index.html",
-  // 瀏覽器執行描述位置
-  "browser_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/browser_action/browser_action.html"
-  },
-  // 覆寫內容位置
-  "chrome_url_overrides": {
-    "newtab": "src/override/override.html"
-  }
+    // 擴充功能名稱
+    "name": "CHANGE THIS : Extension boilerplate",
+    // 擴充功能版本
+    "version": "0.0.1",
+    "manifest_version": 2,
+    // 擴充功能簡介描述
+    "description": "This extension was created with the awesome extensionizr.com",
+    "homepage_url": "http://extensionizr.com",
+    // 擴充功能縮圖位置
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    // 預設本地端語言
+    "default_locale": "en",
+    // 背景執行程式位置
+    "background": {
+        "page": "src/bg/background.html",
+        "persistent": false
+    },
+    // 彈跳選單內容位置
+    "options_page": "src/options/index.html",
+    // 瀏覽器執行描述位置
+    "browser_action": {
+        "default_icon": "icons/icon19.png",
+        "default_title": "browser action demo",
+        "default_popup": "src/browser_action/browser_action.html"
+    },
+    // 覆寫內容位置
+    "chrome_url_overrides": {
+        "newtab": "src/override/override.html"
+    }
 }
 ```
+
 將更新 **manifest.json** 以下內容，完成以後就可以存檔。
 
 1. `name: <擴充套件名子>`
 1. `description: <描述>`
 
 ## 開啟開發人員工具 **安裝擴充套件**
+
 1. 開啟 **Chrome** 右上角 **自訂及管理 > 更多工具 > 擴充功能**，進入之後勾選 **開發人員模式**
 1. 點選 **載入未封裝功能** 尋找此專案資料夾並按確定。
 
 ![Chrome 開啟開發人員工具 安裝擴充套件 範例畫面](https://scontent.ftpe1-1.fna.fbcdn.net/v/t1.0-9/23517997_10208212761276257_7069548037352052842_n.jpg?oh=8190e9f8d165e8b8cfe9122aa1d8bd87&oe=5AAD538E)
 
 ## **src/override**
-### 創建 **main.js** 於 src/override，開始寫程式囉。
 
-``` JavaScript
+開始寫程式囉
+
+### 創建 **main.js** 於 `src/override`
+
+``` javascript
 // 初始化取得福利 API 資料
 function initLoad() {
     var data = [];
@@ -133,6 +137,7 @@ initLoad();
 ```
 
 ### **overraid.html**
+
 完成 **main.js** 之後，我們要把畫面顯示出來創建 **overraid.html**。
 
 ``` html
@@ -172,6 +177,7 @@ initLoad();
 恭喜，已經完成初步的 Chrome Extension 開發。
 
 ### 後續步驟如下
+
 1. 將開發好的專案壓縮成 zip 檔案。
 1. 接著，開啟[Chrome 線上應用程式商店](https://chrome.google.com/webstore/category/extensions?hl=zh-TW)。
 1. 進入[開發人員資訊主頁](https://chrome.google.com/webstore/developer/dashboard?hl=zh-TW)
@@ -181,8 +187,10 @@ initLoad();
 Chrome Extension 開發完成。
 ![Chrome Extension 範例截圖](https://scontent.ftpe1-1.fna.fbcdn.net/v/t31.0-8/23467223_10208212761396260_135096862158608237_o.jpg?oh=ba190ecf7a7027d585013afce044ed3d&oe=5A9454DB)
 
-* * *
-# [Extensionizr](https://extensionizr.com/) 網站簡易中文翻譯
+---
+
+[Extensionizr](https://extensionizr.com/) 網站簡易中文翻譯
+
 ## Name your extension - 選擇你的擴充功能
 
 1. Hidden extension
@@ -233,15 +241,15 @@ Chrome Extension 開發完成。
 
 ## URL permissions - URL 權限
 
-- Separated by ";" (https://*/* ; http://google.com/*)
-    - 網址權限是一種匹配模式集，可讓您的擴展訪問一個或多個主機。
+- Separated by `";" (https://*/* ; http://google.com/*)`
+  - 網址權限是一種匹配模式集，可讓您的擴展訪問一個或多個主機。
 
 ## Permissions - 權限
 
 1. Bookmarks
-    - 使用chrome.bookmarks模塊創建，整理和以其他方式操作書籤。 另請參閱覆蓋頁面，您可以使用它們來創建自定義書籤管理器頁面。
+    - 使用chrome.bookmarks 模塊創建，整理和以其他方式操作書籤。 另請參閱覆蓋頁面，您可以使用它們來創建自定義書籤管理器頁面。
 1. Chrome://favicon
-    - 如果擴展名使用“chrome：// favicon / url”機制顯示頁面的圖標，則必需。 例如“chrome：// favicon / http：//www.google.com/” (http://www.google.com/%E2%80%9D)
+    - 如果擴展名使用 `chrome：// favicon / url` 機制顯示頁面的圖標，則必需。 例如 `chrome：// favicon / http：//www.google.com/ (http://www.google.com/%E2%80%9D)`
 1. Clipboard read access
     - 如果擴展名使用document.execCommand（'paste'），則必需。
 1. Clipboard write access
